@@ -11906,3 +11906,7 @@ body {
 .fa-2x {
   font-size: 2em;
 }
+
+.iconimg img {
+  height: 25px;
+}
