@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Nurse Icon - Reports</title>
+        <title>Nurse Icon - Dashboard</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -21,12 +21,9 @@
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                    <i class="fas fa-bell fa-2x"></i><span class="counter counter-lg">9</span>
                 </div>
-            </form>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -37,7 +34,7 @@
                                 <div class="sb-nav-link-icon"><i class="iconimg"> <img src="./assets/img/Dashboard.png" alt=""></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link " href="appointment.html">
+                            <a class="nav-link" href="appointment.html">
                                 <div class="sb-nav-link-icon"><i class="iconimg"> <img src="./assets/img/Health Checkup.png" alt=""></i></div>
                                 Appointment
                             </a>
@@ -45,11 +42,60 @@
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/PowerPoint.png" alt=""></i></div>
                                 Reports
                             </a>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Users.png" alt=""></i></div>
+                                Users
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down black"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Client</a>
+                                    <a class="nav-link" href="#">Doctor</a>
+                                    <a class="nav-link" href="#">Faculty</a>
+                                </nav>
+                            </div>
+
+                          
+                            <a class="nav-link" href="">
+                                <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Add.png" alt=""></i></div>
+                                Add Services
+                            </a>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#frontpannel" aria-expanded="false" aria-controls="frontpannel">
+                                <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/frontpannel.png" alt=""></i></div>
+                                Front Pannel
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down black"></i></div>
+                            </a>
+                            <div class="collapse" id="frontpannel" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">About Us</a>
+                                    <a class="nav-link" href="#">Our Services</a>
+                                    <a class="nav-link" href="#">Our Team</a>
+                                    <a class="nav-link" href="#">Why Us</a>
+                                    <a class="nav-link" href="#">Testimonial(Customer Review)</a>
+                                    <a class="nav-link" href="#">Gallery</a>
+                                    <a class="nav-link" href="#">Add Hospital</a>
+                                </nav>
+                            </div>
+                           
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#payments" aria-expanded="false" aria-controls="payments">
+                                <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Paper Money.png" alt=""></i></div>
+                                Payment History
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down black"></i></div>
+                            </a>
+                            <div class="collapse" id="payments" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Client Payment</a>
+                                    <a class="nav-link" href="#">Doctor Payment</a>
+                                    <a class="nav-link" href="#">Staff/Faculty Payment</a>
+                                </nav>
+                            </div>
+
                             <a class="nav-link" href="myprofile.html">
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Admin Settings Male.png" alt=""></i></div>
                                 My Profile
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="">
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Shutdown.png" alt=""></i></div>
                                 Logout
                             </a>
@@ -98,7 +144,8 @@
                             </div>
                         </div>
 
-                     
+                        <button class="btn btn-success rounded-pill btn-sm"> <i class="fas fa-upload"></i> Update New Report</button>
+
                         <div class="card mb-4" style="margin-top: 10px;">
                             <div class="card-body">
                                 <table id="datatablesSimple">

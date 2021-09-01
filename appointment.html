@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Nurse Icon - Appointment</title>
+        <title>Nurse Icon - Dashboard</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -21,19 +21,16 @@
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                    <i class="fas fa-bell fa-2x"></i><span class="counter counter-lg">9</span>
                 </div>
-            </form>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link " href="index.html">
                                 <div class="sb-nav-link-icon"><i class="iconimg"> <img src="./assets/img/Dashboard.png" alt=""></i></div>
                                 Dashboard
                             </a>
@@ -45,11 +42,60 @@
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/PowerPoint.png" alt=""></i></div>
                                 Reports
                             </a>
-                            <a class="nav-link" href="myprofile.htmls">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Users.png" alt=""></i></div>
+                                Users
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down black"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Client</a>
+                                    <a class="nav-link" href="#">Doctor</a>
+                                    <a class="nav-link" href="#">Faculty</a>
+                                </nav>
+                            </div>
+
+                          
+                            <a class="nav-link" href="">
+                                <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Add.png" alt=""></i></div>
+                                Add Services
+                            </a>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#frontpannel" aria-expanded="false" aria-controls="frontpannel">
+                                <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/frontpannel.png" alt=""></i></div>
+                                Front Pannel
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down black"></i></div>
+                            </a>
+                            <div class="collapse" id="frontpannel" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">About Us</a>
+                                    <a class="nav-link" href="#">Our Services</a>
+                                    <a class="nav-link" href="#">Our Team</a>
+                                    <a class="nav-link" href="#">Why Us</a>
+                                    <a class="nav-link" href="#">Testimonial(Customer Review)</a>
+                                    <a class="nav-link" href="#">Gallery</a>
+                                    <a class="nav-link" href="#">Add Hospital</a>
+                                </nav>
+                            </div>
+                           
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#payments" aria-expanded="false" aria-controls="payments">
+                                <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Paper Money.png" alt=""></i></div>
+                                Payment History
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down black"></i></div>
+                            </a>
+                            <div class="collapse" id="payments" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Client Payment</a>
+                                    <a class="nav-link" href="#">Doctor Payment</a>
+                                    <a class="nav-link" href="#">Staff/Faculty Payment</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link" href="myprofile.html">
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Admin Settings Male.png" alt=""></i></div>
                                 My Profile
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="">
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Shutdown.png" alt=""></i></div>
                                 Logout
                             </a>
@@ -98,52 +144,106 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-success btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#appointment" style="margin-top: 10px;"> <span><i class="fas fa-plus"></i></span> Create Appointment</button>
                         
-                        <!-- Modal -->
-                            <div class="modal fade" id="appointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Please Select Service</option>
-                                                    <option value="">Service 1</option>
-                                                    <option value="">Service 2</option>
-                                                    <option value="">Service 3</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for=""></label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>More Details</option>
-                                                    <option value="">Details 1</option>
-                                                    <option value="">Details 2</option>
-                                                    <option value="">Details 3</option>
-                                                </select>
-                                            </div>
-                                          <div class="form-group">
-                                            <label for="date" class="col-form-label">Date:</label>
-                                            <input type="text" class="form-control" id="date"></input>
-                                          </div>
-                                          <div class="form-group">
-                                              <label for=""></label>
-                                            <input type="text" class="form-control" placeholder="No of Patient"></input>
-                                          </div>
-                                          <div class="form-group">
-                                              <label for=""></label>
-                                            <input type="text" class="form-control" placeholder="PickUp Address"></input>
-                                          </div>
-                                        </form>
-                                      </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                                </div>
+                          <!-- Modal -->
+                    <div class="modal fade" id="appointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"></h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
+                                <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="appointmentname" class="col-form-label">Appointment Name:</label>
+                                        <input type="text"  class="form-control" id="appointmentname" placeholder="Kiran Ghimire">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="appointmentdate" class="col-form-label">Appointment Date:</label>
+                                        <input type="text"  class="form-control" id="appointmentdate" placeholder="2055/08/12">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="patientname" class="col-form-label">Patient Name:</label>
+                                        <input type="text"  class="form-control" id="patientname" placeholder="Akhabar Ghale">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone" class="col-form-label">Patient Phone No:</label>
+                                        <input type="tel"  class="form-control" id="phone" placeholder="+977 9862314852">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="addr" class="col-form-label">Patient Pickup Address:</label>
+                                        <input type="text"  class="form-control" id="addr" placeholder="Banasthali, Kathmandu">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id" class="col-form-label">Patient ID:</label>
+                                        <input type="number"  class="form-control" id="id" placeholder="20058">
+                                    </div>
+
+                                    <hr>
+                                    <p>If status on process display </p>
+                                    <div class="form-group">
+                                        <label for="assignto" class="col-form-label">Assign To: </label>
+                                        <select class="form-select" id="assignto" aria-label="Default select example">
+                                            <option selected>Please Select Doctor</option>
+                                            <option value="">Doctor 1</option>
+                                            <option value="">Doctor 2</option>
+                                            <option value="">Doctor 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="department" class="col-form-label">Department:</label>
+                                        <select class="form-select" id="department" aria-label="Default select example">
+                                            <option selected>Department</option>
+                                            <option value="">Department 1</option>
+                                            <option value="">Department 2</option>
+                                            <option value="">Department 3</option>
+                                        </select>
+                                    </div>
+
+                                    <hr>
+                                    <p>If status completed display </p>
+
+                                    <div class="form-group">
+                                        <label for="assignto" class="col-form-label">Assigned Doctor: </label>
+                                        <select class="form-select" id="assignto" aria-label="Default select example">
+                                            <option selected>Please Select Doctor</option>
+                                            <option value="">Doctor 1</option>
+                                            <option value="">Doctor 2</option>
+                                            <option value="">Doctor 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="department" class="col-form-label">Department:</label>
+                                        <select class="form-select" id="department" aria-label="Default select example">
+                                            <option selected>Department</option>
+                                            <option value="">Department 1</option>
+                                            <option value="">Department 2</option>
+                                            <option value="">Department 3</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="reportstatus" class="col-form-label">Report Status:</label>
+                                        <input type="text" class="form-control" id="reportstatus" placeholder="Enter Report Status">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="remarks" class="col-form-label">Remarks:</label>
+                                        <textarea name="" class="form-control" id="remarks" cols="5" rows="5" style="resize: none;" placeholder="Please Provide Remarks"></textarea>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                         <div class="card mb-4" style="margin-top: 10px;">
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -166,7 +266,7 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
+                                        <tr  data-bs-toggle="modal" data-bs-target="#appointment">
                                             <td>61</td>
                                             <td>Tiger Nixon</td>
                                             <td>2011/04/25</td>
