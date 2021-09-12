@@ -11914,3 +11914,19 @@ body {
 .black {
   color: black;
 }
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputfile + label{
+  color: white;
+  background-color: green;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 20px;
+}
