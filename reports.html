@@ -42,7 +42,7 @@
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/PowerPoint.png" alt=""></i></div>
                                 Reports
                             </a>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="users.html" data-bs-target="#collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Users.png" alt=""></i></div>
                                 Users
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down black"></i></div>
@@ -56,7 +56,7 @@
                             </div>
 
                           
-                            <a class="nav-link" href="">
+                            <a class="nav-link" href="addservices.html">
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Add.png" alt=""></i></div>
                                 Add Services
                             </a>
@@ -199,28 +199,28 @@
                     <form>
                         <div class="form-group">
                             <label for="patientid" class="col-form-label">Patient Id:</label>
-                            <input type="number" class="form-control" id="patientid" placeholder="Enter Patient Id">
+                            <input type="number"  class="form-control" id="patientid" placeholder="Enter Patient Id">
                         </div>
                         <div class="form-group">
                             <label for="name" class="col-form-label">Patient Name:</label>
-                            <input type="text"  class="form-control" id="name" placeholder="Enter patient name">
+                            <input type="text" readonly class="form-control" id="name" Value="Kiran Ghimire">
                         </div>
                         <div class="form-group">
                             <label for="appointment_name" class="col-form-label">Appointment Name:</label>
-                            <input type="text" class="form-control" id="appointment_name" placeholder="Enter appointment name">
+                            <input type="text" readonly class="form-control" id="appointment_name" value="Irajan Dhakal">
+                        </div>
+                        <div class="form-group" style="padding-top: 10px;">
+                            <label for="report_upload" class="col-form-label"></label>
+                            <input type="file" accept="image/jpeg, application/pdf" class="inputfile" id="file"><label for="file"><i class="fas fa-upload"></i>Upload Report</label>
                         </div>
                         <div class="form-group">
                             <label for="report_status" class="col-form-label">Report Status:</label>
                             <input type="text" class="form-control" id="report_status" placeholder="Enter report status">
                         </div>
+
                         <div class="form-group">
                             <label for="remarks" class="col-form-label">Remarks:</label>
-                            <textarea class="form-control" id="remarks" placeholder="Enter Remarks" rows="5" cols="5" style="resize: none;"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="report_upload" class="col-form-label">Upload Report:</label>
-                            <a href=""></a>
-                            <input type="file" accept="image/jpeg, application/pdf" class="inputfile" id="file"><label for="file"><i class="fas fa-upload"></i>Upload Report</label>
+                            <textarea class="form-control" required id="remarks" placeholder="Enter Remarks" rows="5" cols="5" style="resize: none;"></textarea>
                         </div>
 
 

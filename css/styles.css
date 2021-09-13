@@ -11930,3 +11930,37 @@ body {
   padding: 5px;
   border-radius: 20px;
 }
+
+.dot-warning {
+  width: 1rem;
+  height: 1rem;
+  background-color: yellow;
+  border: black 1px solid;
+  border-radius: 50%;
+}
+
+.dot-success {
+  width: 1rem;
+  height: 1rem;
+  background-color: green;
+  border: black 1px solid;
+  border-radius: 50%;
+}
+
+.dot-danger {
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+  border: black 1px solid;
+  border-radius: 50%;
+}
+
+.dot--basic {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100%  {opacity: 0;}
+}
