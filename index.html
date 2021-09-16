@@ -49,9 +49,9 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="#">Client</a>
-                                    <a class="nav-link" href="#">Doctor</a>
-                                    <a class="nav-link" href="#">Faculty</a>
+                                    <a class="nav-link" href="client.html">Client</a>
+                                    <a class="nav-link" href="doctor.html">Doctor</a>
+                                    <a class="nav-link" href="faculty.html">Faculty</a>
                                 </nav>
                             </div>
 
@@ -152,7 +152,11 @@
                                                 <tr>
                                                     <th>S.N</th>
                                                     <th>Patient ID</th>
+                                                    <th>Patient Name</th>
+                                                    <th>Appointment Name</th>
+                                                    <th>Appointment Type</th>
                                                     <th>Appointment Date</th>
+                                                    <th>Age</th>
                                                     <th>Status</th>
                                                 </tr>
                                             </thead>
@@ -160,7 +164,11 @@
                                                 <tr>
                                                     <th>S.N</th>
                                                     <th>Patient ID</th>
+                                                    <th>Patient Name</th>
+                                                    <th>Appointment Name</th>
+                                                    <th>Appointment Type</th>
                                                     <th>Appointment Date</th>
+                                                    <th>Age</th>
                                                     <th>Status</th>
                                                 </tr>
                                             </tfoot>
@@ -168,40 +176,34 @@
                                                 <tr data-bs-toggle="modal" data-bs-target="#dash">
                                                     <td>61</td>
                                                     <td>1556262</td>
+                                                    <td>Hari thapa</td>
+                                                    <td>Kiran Ghimire</td>
+                                                    <td>Home Care</td>
                                                     <td>2011/04/25</td>
-                                                    <td><span class="badge badge-warning">On Process</span></td>
+                                                    <td>25</td>
+                                                    <td style="display: flex;"><div class="dot-warning dot--basic" aria-hidden="true"></div><span class="badge">On Process</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>63</td>
                                                     <td>64654</td>
+                                                    <td>ram bahadur</td>
+                                                    <td>shyam basnet</td>
+                                                    <td>Dressing</td>
                                                     <td>2011/07/25</td>
-                                                    <td><span class="badge badge-warning">On Process</span></td>
+                                                    <td>25</td>
+                                                    <td style="display: flex;"><div class="dot-success dot--basic" aria-hidden="true"></div><span class="badge">Completed</span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>66</td>
                                                     <td>45545</td>
+                                                    <td>sita thapa</td>
+                                                    <td>gita nepali</td>
+                                                    <td>Operation</td>
                                                     <td>2009/01/12</td>
-                                                    <td><span class="badge badge-danger">Cancelled</span></td>
+                                                    <td>12</td>
+                                                    <td style="display: flex;"><div class="dot-danger dot--basic" aria-hidden="true"></div><span class="badge">Cancelled</span></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>22</td>
-                                                    <td>798653</td>
-                                                    <td>2012/03/29</td>
-                                                    <td><span class="badge badge-danger">Cancelled</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>33</td>
-                                                    <td>548133</td>
-                                                    <td>2008/11/28</td>
-                                                    <td><span class="badge badge-success">Completed</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>61</td>
-                                                    <td>645445</td>
-                                                    <td>2012/12/02</td>
-                                                    <td><span class="badge badge-pill badge-success">Completed</span></td>
-                                                </tr>
-                                            
+                                                
                                             
                                             </tbody>
                                         </table>
@@ -209,7 +211,7 @@
                                 </div>
                             </div>
                             <div class="col col-lg-2 col-md-2 col-sm-12">
-                                this is the second div
+                                
                             </div>
                         </div>
                        
@@ -242,12 +244,36 @@
                             <input type="text" readonly class="form-control" id="appointmentdate" value="2055/08/12">
                         </div>
                         <div class="form-group">
+                            <label for="appointmenttype" class="col-form-label">Appointment Type:</label>
+                            <input type="text" readonly class="form-control" id="appointmenttype" value="Dressing">
+                        </div>
+                        <div class="form-group">
                             <label for="patientname" class="col-form-label">Patient Name:</label>
                             <input type="text" readonly class="form-control" id="patientname" value="Akhabar Ghale">
                         </div>
                         <div class="form-group">
                             <label for="phone" class="col-form-label">Patient Phone No:</label>
                             <input type="tel" readonly class="form-control" id="phone" value="+977 9862314852">
+                        </div>
+                        <div class="form-group">
+                            <label for="age" class="col-form-label">Patient Age:</label>
+                            <input type="text" readonly class="form-control" id="age" value="52">
+                        </div>
+                        <div class="form-group">
+                            <label for="pressure" class="col-form-label">Patient Pressure:</label>
+                            <input type="text" readonly class="form-control" id="pressure" value="52/100">
+                        </div>
+                        <div class="form-group">
+                            <label for="sugar" class="col-form-label">Patient Sugar:</label>
+                            <input type="text" readonly class="form-control" id="sugar" value="No">
+                        </div>
+                        <div class="form-group">
+                            <label for="height" class="col-form-label">Patient Height(in ft):</label>
+                            <input type="text" readonly class="form-control" id="height" value="5 ft">
+                        </div>
+                        <div class="form-group">
+                            <label for="weight" class="col-form-label">Patient weight(in kg):</label>
+                            <input type="text" readonly class="form-control" id="weight" value="50 ft">
                         </div>
 
                         <div class="form-group">

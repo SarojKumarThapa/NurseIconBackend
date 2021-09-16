@@ -51,12 +51,12 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="client.html">Client</a>
                                     <a class="nav-link" href="doctor.html">Doctor</a>
-                                    <a class="nav-link" href="faculty.html">Faculty</a>
+                                    <a class="nav-link active" href="faculty.html">Faculty</a>
                                 </nav>
                             </div>
 
                           
-                            <a class="nav-link active" href="addservices.html">
+                            <a class="nav-link" href="addservices.html">
                                 <div class="sb-nav-link-icon"><i class="iconimg"><img src="./assets/img/Add.png" alt=""></i></div>
                                 Add Services
                             </a>
@@ -144,7 +144,7 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-success rounded-pill btn-sm" data-bs-toggle="modal" data-bs-target="#add_service"> <span style="background-color: green; padding: 2px; border-radius: 50%;"><i class="fas fa-plus"> </span></i> Add New Service</button>
+                        <button class="btn btn-success rounded-pill btn-sm" data-bs-toggle="modal" data-bs-target="#facuilty"> <i class="fas fa-users"></i> Add Facuilty</button>
 
                         <div class="card mb-4" style="margin-top: 10px;">
                             <div class="card-body">
@@ -152,28 +152,34 @@
                                     <thead>
                                         <tr>
                                             <th>S.N</th>
-                                            <th>Service</th>
-                                            <th>Type of Service</th>
-                                            <th>Remarks</th>
+                                            <th>Staff Id</th>
+                                            <th>Full Name</th>
+                                            <th>User ID</th>
+                                            <th>Email</th>
+                                            <th>Post</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>S.N</th>
-                                            <th>Service</th>
-                                            <th>Type of Service</th>
-                                            <th>Remarks</th>
+                                            <th>Staff Id</th>
+                                            <th>Full Name</th>
+                                            <th>User ID</th>
+                                            <th>Email</th>
+                                            <th>Post</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>Home Care</td>
-                                            <td>Dressing</td>
-                                            <td>Needed Full prescription</td>
-                                            <td><a href="" data-bs-toggle="modal" data-bs-target="#add_service"><span style=" color: red; padding-left: 10px; padding-right: 10px;"><i class="fas fa-pencil-alt"></i></span></a> | <span style=" color: red; padding-left: 10px;"><i class="fas fa-trash"></i></span></td>
+                                            <td>8622</td>
+                                            <td>Kiran Ghimire</td>
+                                            <td>#064</td>
+                                            <td>kirangh@gmail.com</td>
+                                            <td>Operation Incharge</td>
+                                            <td><a href="view-fauilty-details.html">View Details</a></td>
                                         </tr>
 
                                        
@@ -189,7 +195,7 @@
 
 
         <!-- bootstrap modal -->
-        <div class="modal fade" id="add_service" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="facuilty" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -201,33 +207,41 @@
                     <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="service" class="col-form-label">Service:</label>
-                            <input type="text"  class="form-control" id="service" placeholder="Enter Service You Want">
+                            <label for="fullname" class="col-form-label">Full Name:</label>
+                            <input type="text"  class="form-control" id="fullname" placeholder="Enter Full Name">
                         </div>
                         <div class="form-group">
-                            <label for="service" class="col-form-label">Type of Service:</label>
-                            <div class="row" id="adddd">                            
-                                <div style="width: 90%;">
-                                    <input type="text"  class="form-control" id="service" placeholder="Enter type of service you wanted">
-                                </div>
-                                <div style="width: 10%;">
-                                    <a class="btn btn-sm btn-success" onclick ="appendRow()" value=""><i class="fas fa-plus"></i></a>
-                                </div>
-                                </div>
-                            <script>
-                                var x=1
-                                function appendRow()
-                                {
-                                var d = document.getElementById('adddd');
-                                d.innerHTML += "<label class='col-form-label'></label> <div style='width:90%;'><input type='text' class='form-control' placeholder='Enter type of service you wanted'></div>";
-                                }
-                            </script>
+                            <label for="userid" class="col-form-label">User Id:</label>
+                            <input type="number"  class="form-control" id="userid" placeholder="Enter User Id">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" placeholder="Enter Password" name="password" id="password" />
+                        </div>
+                        <div class="form-group">
+                            <label for="confPass" class="col-form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confPass" placeholder="Confirm Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="kirangh@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="post" class="col-form-label">Post:</label>
+                            <input type="text" id="post" class="form-control" placeholder="Enter the post">
                         </div>
 
                         <div class="form-group">
-                            <label for="remarks" class="col-form-label">Remarks:</label>
-                            <textarea class="form-control" required id="remarks" placeholder="Enter Remarks" rows="5" cols="5" style="resize: none;"></textarea>
+                            <label for="date" class="col-form-label">Joined Date:</label>
+                            <input type="date" class="form-control" id="date">
                         </div>
+
+                        <div class="form-group">
+                            <label for="time" class="col-form-label">Time</label>
+                            <input type="time" class="form-control" id="time">
+                        </div>
+
+                       
                         
                     </form>
                   </div>

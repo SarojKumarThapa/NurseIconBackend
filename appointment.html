@@ -49,9 +49,9 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="#">Client</a>
-                                    <a class="nav-link" href="#">Doctor</a>
-                                    <a class="nav-link" href="#">Faculty</a>
+                                    <a class="nav-link" href="client.html">Client</a>
+                                    <a class="nav-link" href="doctor.html">Doctor</a>
+                                    <a class="nav-link" href="faculty.html">Faculty</a>
                                 </nav>
                             </div>
 
@@ -143,7 +143,62 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="btn btn-success rounded-pill btn-sm" data-bs-toggle="modal" data-bs-target="#createappointment"> <span><i class="fas fa-plus"  style="background-color: orange; padding: 2px; border-radius: 50%;"></i> </span> Create Appointment</button>
+                        
+                        <div class="modal fade" id="createappointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title"></h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                    <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="service" class="col-form-label">Services: </label>
+                                            <select class="form-select" id="service" aria-label="Default select example">
+                                                <option selected>Please Select Services</option>
+                                                <option value="">service 1</option>
+                                                <option value="">service 2</option>
+                                                <option value="">service 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="sub-service" class="col-form-label">Type of Services: </label>
+                                            <select class="form-select" id="sub-service" aria-label="Default select example">
+                                                <option selected>Please Select Type Services</option>
+                                                <option value="">service type 1</option>
+                                                <option value="">service type 2</option>
+                                                <option value="">service type 3</option>
+                                            </select>
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label for="date" class="col-form-label">Date:</label>
+                                            <input type="date"  class="form-control" id="date">
+                                        </div>
 
+                                        <div class="form-group">
+                                            <label for="addr" class="col-form-label">Patient Pickup Address:</label>
+                                            <input type="text"  class="form-control" id="addr" placeholder="Banasthali, Kathmandu">
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label for="remarks" class="col-form-label">Remarks:</label>
+                                            <textarea name="" class="form-control" id="remarks" cols="5" rows="5" style="resize: none;" placeholder="Please Provide Remarks"></textarea>
+                                        </div>
+    
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Create Appointment</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                         
                           <!-- Modal -->
                     <div class="modal fade" id="appointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -207,6 +262,15 @@
                                     <p>If status completed display </p>
 
                                     <div class="form-group">
+                                        <label for="chgstatus" class="col-form-label">Change Status: </label>
+                                        <select class="form-select" id="chgstatus" aria-label="Default select example">
+                                            <option selected>Change Status</option>
+                                            <option value="">On Process</option>
+                                            <option value="">Cancelled</option>
+                                            <option value="">Completed</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="assignto" class="col-form-label">Assigned Doctor: </label>
                                         <select class="form-select" id="assignto" aria-label="Default select example">
                                             <option selected>Please Select Doctor</option>
@@ -253,8 +317,10 @@
                                             <th>Patient ID</th>
                                             <th>Patient Name</th>
                                             <th>Appointment Name</th>
+                                            <th>Appointment Type</th>
                                             <th>Appointment Date</th>
                                             <th>Assigned Doctor</th>
+                                            <th>Remarks</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
@@ -264,8 +330,10 @@
                                             <th>Patient ID</th>
                                             <th>Patient Name</th>
                                             <th>Appointment Name</th>
+                                            <th>Appointment Type</th>
                                             <th>Appointment Date</th>
                                             <th>Assigned Doctor</th>
+                                            <th>Remarks</th>
                                             <th>Status</th>
                                         </tr>
                                     </tfoot>
@@ -274,9 +342,11 @@
                                             <td>61</td>
                                             <td>6454</td>
                                             <td>Tiger Nixon</td>
+                                            <td>Normal</td>
                                             <td>sugar</td>
                                             <td>2011/04/25</td>
                                             <td>Irajan</td>
+                                            <td>this is the remarks</td>
                                             <td style="display: flex;"><div class="dot-warning dot--basic" aria-hidden="true"></div><span class="badge">On Process</span></td>
                                         </tr>
                                        
@@ -284,9 +354,11 @@
                                             <td>75</td>
                                             <td>138</td>
                                             <td>Travor Noha</td>
+                                            <td>BP Checkup</td>
                                             <td>Hepatitis</td>
                                             <td>2011/04/25</td>
                                             <td>Kiran</td>
+                                            <td>this is the remarks</td>
                                             <td style="display: flex;"><div class="dot-success dot--basic" aria-hidden="true"></div><span class="badge">Completed</span></td>
                                         </tr>
                                        
@@ -294,9 +366,11 @@
                                             <td>89</td>
                                             <td>17623</td>
                                             <td>Beyonce</td>
+                                            <td>ABCD Checkup</td>
                                             <td>COVID- 19</td>
                                             <td>2011/04/25</td>
                                             <td>Mousam</td>
+                                            <td>this is the remarks</td>
                                             <td style="display: flex;"><div class="dot-danger dot--basic" aria-hidden="true"></div><span class="badge">Cancelled</span></td>
                                         </tr>
                                        

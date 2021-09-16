@@ -49,9 +49,9 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="#">Client</a>
-                                    <a class="nav-link" href="#">Doctor</a>
-                                    <a class="nav-link" href="#">Faculty</a>
+                                    <a class="nav-link " href="client.html">Client</a>
+                                    <a class="nav-link" href="doctor.html">Doctor</a>
+                                    <a class="nav-link" href="faculty.html">Faculty</a>
                                 </nav>
                             </div>
 
@@ -85,7 +85,7 @@
                             </a>
                             <div class="collapse" id="payments" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="#">Client Payment</a>
+                                    <a class="nav-link" href="">Client Payment</a>
                                     <a class="nav-link" href="#">Doctor Payment</a>
                                     <a class="nav-link" href="#">Staff/Faculty Payment</a>
                                 </nav>
@@ -144,108 +144,8 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-success rounded-pill btn-sm" data-bs-toggle="modal" data-bs-target="#users"> <i class="fas fa-users"></i> Add Faculty</button>
-
-                        <div class="card mb-4" style="margin-top: 10px;">
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>S.N</th>
-                                            <th>Staff ID</th>
-                                            <th>Full Name</th>
-                                            <th>User ID</th>
-                                            <th>Email</th>
-                                            <th>Post</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>S.N</th>
-                                            <th>Staff ID</th>
-                                            <th>Full Name</th>
-                                            <th>User ID</th>
-                                            <th>Email</th>
-                                            <th>Post</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>55064</td>
-                                            <td>Kiran Ghimire</td>
-                                            <td>8</td>
-                                            <td>kirangh@gmail.com</td>
-                                            <td>Head Surgion</td>
-                                            <td> <a href=""> View Details </a></td>
-                                        </tr>
-
-                                       
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                       
                     </div>
                 </main>
-            </div>
-        </div>
-
-
-        <!-- bootstrap modal -->
-        <div class="modal fade" id="users" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"></h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                    <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="fullname" class="col-form-label">Full Name:</label>
-                            <input type="text"  class="form-control" id="fullname" placeholder="Enter Full Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="userid" class="col-form-label">User ID:</label>
-                            <input type="number" class="form-control" id="userid" placeholder="Enter User ID">
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-form-label">Password:</label>
-                            <input type="password"  class="form-control" id="password" placeholder="Enter Password">
-                        </div>
-                        <div class="form-group">
-                            <label for="re-password" class="col-form-label">Confirm Password:</label>
-                            <input type="password"  class="form-control" id="re-password" placeholder="Retype Password Again">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-form-label">Email:</label>
-                            <input type="email"  class="form-control" id="email" placeholder="Enter Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="post" class="col-form-label">Post:</label>
-                            <input type="text"  class="form-control" id="post" placeholder="Enter Post">
-                        </div>
-                        <div class="form-group">
-                            <label for="date" class="col-form-label">Joined Date:</label>
-                            <input type="date"  class="form-control" id="date" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <label for="time" class="col-form-label">Time:</label>
-                            <input type="time"  class="form-control" id="time" placeholder="">
-                        </div>
-
-                    </form>
-                  </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success">Add</button>
-                </div>
-            </div>
             </div>
         </div>
 
